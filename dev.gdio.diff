@@ -1,13 +1,30 @@
+diff --git a/app-server/Dockerfile b/app-server/Dockerfile
+index 6a4e2e9..bb0ec61 100644
+--- ./app-server/Dockerfile
++++ ./app-server/Dockerfile
+@@ -3,7 +3,7 @@
+ # Based on Python:2.7 Image
+ ############################################################
+ 
+-FROM python:2.7
++FROM python:3
+ MAINTAINER jithin.sayone@gmail.com
+ 
+ RUN apt-get update
 diff --git a/app-server/requirements.txt b/app-server/requirements.txt
-index 8365cee..1e845a7 100644
+index 8365cee..0bbd204 100644
 --- ./app-server/requirements.txt
 +++ ./app-server/requirements.txt
-@@ -4,7 +4,7 @@ django-pgjson==0.3.1
+@@ -1,10 +1,10 @@
+-Django==1.10.3
++Django>=3.0,<4.0
+ django-filter==0.15.3
+ django-pgjson==0.3.1
  djangorestframework==3.5.2
  jsonfield==1.0.3
  Markdown==2.6.7
 -psycopg2==2.6.2
-+psycopg2==2.7
++psycopg2-binary>=2.8
  matplotlib==1.5.3
  numpy==1.11.2
  boto==2.43.0
